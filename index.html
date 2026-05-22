@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+.widget{max-width:600px;margin:12px auto;padding:16px;background:#1e293b;color:#e2e8f0;border-radius:8px;font-family:Arial}
+.widget h3{color:#38bdf8;margin:0 0 8px}
+.widget .q{font-size:16px;margin:8px 0}
+.widget .a{display:none;background:#334155;padding:8px;border-radius:4px;margin:8px 0;font-size:14px}
+.widget button{background:#2563eb;color:white;border:none;padding:6px 16px;border-radius:4px;cursor:pointer}
+.widget .ft{font-size:11px;color:#64748b;margin-top:8px}
+</style></head><body>
+<div class="widget" id="javaq"></div>
+<script>
+const qs=[{q:"HashMap底层结构？",a:"数组+链表+红黑树。put时hash定位→尾插→>8转红黑树→>64扩容。"},{q:"Redis缓存穿透？",a:"布隆过滤器+缓存空值+接口校验。三招组合。"},{q:"Spring Boot自动配置？",a:"@EnableAutoConfiguration→加载META-INF/spring/...imports→@Conditional按需装配。"},{q:"秒杀怎么防超卖？",a:"Redis Lua脚本原子扣库存。检查→扣减→返回,一步完成。"},{q:"TCP为什么三次握手？",a:"防止旧连接请求。两次握手服务端无法确认客户端收发能力。"}];
+let i=Math.floor(Math.random()*qs.length),q=qs[i];
+document.getElementById('javaq').innerHTML='<h3>☕ Java面试每日一题</h3><div class="q">'+q.q+'</div><button onclick="this.nextSibling.style.display=\'block\';this.remove()">查看答案</button><div class="a">'+q.a+'</div><div class="ft">📚 <a href="https://Abyte-zym.github.io/arsenal" style="color:#64748b">更多Java面试工具</a></div>';
+</script></body></html>
